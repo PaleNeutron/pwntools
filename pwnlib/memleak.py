@@ -143,7 +143,7 @@ class MemLeak(object):
         offset = obj.offset
         data   = self.n(address + offset, size)
         if not data:
-            return None
+            return False
         return unpack(data, size*8)
 
     def field_compare(self, address, obj, expected):
